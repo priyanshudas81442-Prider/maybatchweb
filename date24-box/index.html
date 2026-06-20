@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product{
+            border: 2px solid black;
+            width:250px;
+            text-align:center;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 5px;
+            background-color: rgb(149, 207, 95);
+            box-shadow: o 4px 8px rgb(0, 0, 0);
+        }
+        .product img{
+          width:100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 11px;
+          border: 1px solid rgb(0, 0, 0);
+        }
+        .product:hover{
+          transform: scale(1.1);
+          box-shadow: 0 4px 8px rgb(42, 23, 161);
+          transition: 0.3s;
+        }
+        .product button{
+          background-color: chocolate;
+          border: none;
+          border-radius:12px ;
+          padding: 10px;
+        }
+        .product h2{
+          color: white;
+        }
+        body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+  <div class="product">
+    <img src="https://images.pexels.com/photos/13013307/pexels-photo-13013307.jpeg" >
+    <h2>Coffee</h2>
+    <p>Rs.100.00</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="product">
+    <img src="https://images.pexels.com/photos/10353337/pexels-photo-10353337.jpeg" >
+    <h2>Cookie</h2>
+    <p>Rs.150.00</p>
+    <button>Buy Now</button>
+  </div>
+
+  <div class="product">
+    <img src="https://images.pexels.com/photos/8625935/pexels-photo-8625935.jpeg" >
+    <h2>Cup cake</h2>
+    <p>Rs.200.00</p>
+    <button>Buy Now</button>
+  </div> 
+  <div class="product">
+    <img src="https://images.pexels.com/photos/34541593/pexels-photo-34541593.jpeg" >
+    <h2>Cold coffe</h2>
+    <p>Rs.190.00</p>
+    <button>Buy Now</button>
+  </div>  
+</body>
+</html>
