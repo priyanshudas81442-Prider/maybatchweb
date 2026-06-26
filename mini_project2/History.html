@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <title>History Books</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background: #0f172a;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="max-w-6xl mx-auto py-20">
+      <h1 class="text-5xl mb-10">📚 History Books</h1>
+
+      <section class="py-12 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">Find Your Next Book</h2>
+
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search Books..."
+          class="w-full max-w-xl p-4 rounded-lg text-white"
+        />
+      </section>
+
+      <a href="index.html" class="bg-cyan-500 px-4 py-2 rounded"> ← Back </a>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/16/51/58/1651588c742f20ff3dcb37cc32c65716.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Guns, Germs, and Steel</h3>
+          <h6>by Jared Diamond</h6>
+          <p>A compelling exploration of how geography and environment have shaped human history.</p>
+          <p class="my-3">₹499</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/ce/68/fa/ce68fa1c52299c88190b77c308441676.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">A short history of nearly everything</h3>
+          <h6>by Bill Bryson</h6>
+          <p>A humorous and informative overview of the history of the world, from the Big Bang to the present day.</p>
+          <p class="my-3">₹699</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/15/09/c1/1509c1878ad020413f88ff01c33ca8e1.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Argumentative Indian</h3>
+          <h6>by Amartya Sen</h6>
+          <p> A collection of essays that explore the role of argument and debate in Indian society and culture.</p>
+          <p class="my-3">₹450</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/ef/33/3d/ef333d78be1167c16e881db5e0168249.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">India after Gandhi</h3>
+          <h6>by Ramachandra Guha</h6>
+          <p> A comprehensive account of India's journey from independence to the present day, examining the challenges and achievements of the nation.</p>
+          <p class="my-3">₹499</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/e1/a2/84/e1a2846d006c590b11ff386b996ff5fd.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Train to Pakistan</h3>
+          <h6>by Khushwant Singh</h6>
+          <p> A powerful novel about the partition of India and Pakistan, and its impact on the lives of ordinary people.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/62/55/16/625516bb0ac5967eed4b63e2ee296796.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Discovery of India</h3>
+          <h6>by Jawaharlal Nehru</h6>
+          <p> A comprehensive account of India's journey from independence to the present day, examining the challenges and achievements of the nation.</p>
+          <p class="my-3">₹250</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/be/ee/fc/beeefcca15835cf3ae45c7b2761b147f.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Silk Roads: A New History of the World</h3>
+          <h6>by Peter Frankopan</h6>
+          <p> A paradigm-shifting look at world history, shifting the focus away from Western civilizations and highlighting the central role of Central Asia and the Middle East.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/8d/e4/8a/8de48abb534c99a76996013d265e45fb.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Empires of the Indus: The Story of a River</h3>
+          <h6>by Alice Albinia</h6>
+          <p> A captivating blend of travelogue and history that follows the 1,800-mile journey of the Indus River, tracing the civilizations and empires that rose and fell along its banks.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/47/4f/28/474f28ff469500c1a4f865977e3de0a1.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Anarchy: The Relentless Rise of the East India Company</h3>
+          <h6>by William Dalrymple</h6>
+          <p> A gripping account of how a single corporate entity slowly took over the Indian subcontinent, pillaging an empire in the process.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <script>
+      // SEARCH FUNCTION
+      const searchInput = document.getElementById("searchInput");
+
+      searchInput.addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+
+        const books = document.querySelectorAll(".book-card");
+
+        books.forEach((book) => {
+          const title = book.querySelector("h3").innerText.toLowerCase();
+
+          if (title.includes(value)) {
+            book.style.display = "block";
+          } else {
+            book.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

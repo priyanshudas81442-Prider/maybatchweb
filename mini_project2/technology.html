@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Technology Books</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background: #0f172a;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="max-w-6xl mx-auto py-20">
+      <h1 class="text-5xl mb-10">📚 Technology Books</h1>
+
+      <section class="py-12 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">Find Your Next Book</h2>
+
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search Books..."
+          class="w-full max-w-xl p-4 rounded-lg text-white"
+        />
+      </section>
+
+      <a href="index.html" class="bg-cyan-500 px-4 py-2 rounded"> ← Back </a>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/bd/93/8a/bd938afc278af32c84f778cae28ce414.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Designing Data-Intensive Applications</h3>
+          <h6>by Martin Kleppmann</h6>
+          <p>A comprehensive guide to designing and building scalable data-intensive applications.</p>
+          <p class="my-3">₹499</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/09/a5/bb/09a5bb8fc6f4a001ef010107458ed37d.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Code: The Hidden Language of Computer Hardware and Software</h3>
+          <h6>by Charles Petzold</h6>
+          <p>A comprehensive guide to understanding the fundamental principles of computer hardware and software.</p>
+          <p class="my-3">₹699</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/8c/3d/5f/8c3d5f97321c3821e265b671d71caf98.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Coming Wave: AI, Power, and Our Future</h3>
+          <h6>by Mustafa Suleyman</h6>
+          <p> A thought-provoking exploration of the impact of artificial intelligence on society and the future of work.</p>
+          <p class="my-3">₹450</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/d2/f2/36/d2f236e3864c7b93812bb298801276ff.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Shallows: What the Internet Is Doing to Our Brains</h3>
+          <h6>by Nicholas Carr</h6>
+          <p> A thought-provoking read exploring how continuous exposure to digital technology and the internet is altering our concentration spans and deep-thinking capabilities.</p>
+          <p class="my-3">₹399</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/44/0d/5e/440d5e3e5d5dec0e1aadd89892c59d35.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Chip War: The Fight for the World's Most Critical Technology</h3>
+          <h6>by Chris Miller</h6>
+          <p> A deep dive into the geopolitical and economic history of semiconductors, and why microchips are the most vital resource in modern technology.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/12/2b/51/122b510e73ca15bb2e889bc34aea79f8.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Innovator's Dilemma </h3>
+          <h6>by Clayton Christensen</h6>
+          <p> A groundbreaking book that explores the challenges faced by successful companies when trying to innovate and stay ahead of the competition.</p>
+          <p class="my-3">₹250</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/ea/b0/23/eab0230fa94a373472661c6996b8a433.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Big Nine: How the Tech Titans and Their Thinking Machines Could Warp Humanity</h3>
+          <h6>by Amy Webb</h6>
+          <p> An examination of the nine major technology companies dictating the development of AI, exploring the potential consequences for our future.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/7b/86/7a/7b867a4b1012de214784bed3dddab13a.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Staff Engineer's Path </h3>
+          <h6> by Tanya Reilly</h6>
+          <p> A comprehensive guide to advancing your career as a software engineer, covering technical skills, leadership, and professional growth.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/b6/1e/a9/b61ea93f0a3633d0fac93b4ba18770c8.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World</h3>
+          <h6>by Pedro Domingos</h6>
+          <p> A comprehensive exploration of the field of machine learning and the quest to create a universal algorithm that can learn anything.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <script>
+      // SEARCH FUNCTION
+      const searchInput = document.getElementById("searchInput");
+
+      searchInput.addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+
+        const books = document.querySelectorAll(".book-card");
+
+        books.forEach((book) => {
+          const title = book.querySelector("h3").innerText.toLowerCase();
+
+          if (title.includes(value)) {
+            book.style.display = "block";
+          } else {
+            book.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

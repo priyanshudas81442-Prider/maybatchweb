@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Science Books</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background: #0f172a;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="max-w-6xl mx-auto py-20">
+      <h1 class="text-5xl mb-10">📚 Science Books</h1>
+
+      <section class="py-12 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">Find Your Next Book</h2>
+
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search Books..."
+          class="w-full max-w-xl p-4 rounded-lg text-white"
+        />
+      </section>
+
+      <a href="index.html" class="bg-cyan-500 px-4 py-2 rounded"> ← Back </a>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/2d/65/70/2d6570b6cd71d8c829a14afe72ba92b8.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">A Brief History of Time</h3>
+          <h6>by Stephen Hawking</h6>
+          <p>A journey through the cosmos and the nature of space and time.</p>
+          <p class="my-3">₹499</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/de/a5/69/dea569e376f1f88bfb584ea3d6adece0.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Cosmos</h3>
+          <h6>by Carl Sagan</h6>
+          <p>A journey through the universe and the wonders of space and time.</p>
+          <p class="my-3">₹599</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/93/84/3a/93843af6053c834effb01859061ac89b.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Selfish Gene</h3>
+          <h6>by Richard Dawkins</h6>
+          <p> A groundbreaking book that explores the concept of genetic selfishness and its implications for understanding evolution.</p>
+          <p class="my-3">₹450</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/7c/af/d1/7cafd1d5fac55a007591743d0c626616.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Hidden life of Trees</h3>
+          <h6>by Peter Wohlleben</h6>
+          <p> A fascinating look at the complex and interconnected world of trees.</p>
+          <p class="my-3">₹399</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/69/2b/80/692b807e2837f9645592276778b72bef.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Sapiens: A Brief History of Humankind</h3>
+          <h6>by Yuval Noah Harari</h6>
+          <p> A brief history of humankind, exploring the cognitive, agricultural, and scientific revolutions that have shaped our species.</p>
+          <p class="my-3">₹499</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/3b/5a/0f/3b5a0fbce8a9246201471c81e616b6fc.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Thinking, Fast and Slow</h3>
+          <h6>by Daniel Kahneman</h6>
+          <p> A Nobel Prize-winning psychologist explores the two systems of thinking that drive our decisions.</p>
+          <p class="my-3">₹399</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/4e/84/44/4e8444d2f89e0a830763fc0a0ae64455.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Immortal Life of Henrietta Lacks</h3>
+          <h6>by Rebecca Skloot</h6>
+          <p> A fascinating look at the complex and interconnected world of trees.</p>
+          <p class="my-3">₹399</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/5a/39/78/5a39781bdb4901e02d47c42b7042144c.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Astrophysics for People in a Hurry</h3>
+          <h6>by Neil deGrasse Tyson</h6>
+          <p> A concise introduction to the wonders of the universe, explaining complex concepts in an accessible way.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/5d/a8/1b/5da81bc2ff8b1602422d81651614d418.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Gene: An Intimate History</h3>
+          <h6>by Siddhartha Mukherjee</h6>
+          <p> A compelling exploration of the science of genetics and its impact on human life.</p>
+          <p class="my-3">₹399</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <script>
+      // SEARCH FUNCTION
+      const searchInput = document.getElementById("searchInput");
+
+      searchInput.addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+
+        const books = document.querySelectorAll(".book-card");
+
+        books.forEach((book) => {
+          const title = book.querySelector("h3").innerText.toLowerCase();
+
+          if (title.includes(value)) {
+            book.style.display = "block";
+          } else {
+            book.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

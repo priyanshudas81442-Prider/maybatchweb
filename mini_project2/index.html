@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book_Verse 🛸</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background: #0f172a;
+        color: white;
+        scroll-behavior: smooth;
+      }
+
+      .hero-bg {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .modal {
+        display: none;
+      }
+
+      .modal.active {
+        display: flex;
+      }
+
+      .blur-bg {
+        filter: blur(5px);
+      }
+
+      .book-card:hover {
+        transform: translateY(-10px);
+        transition: 0.4s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainContent">
+      <!-- NAVBAR -->
+      <nav class="bg-slate-900 fixed w-full z-50 shadow-lg">
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+        >
+          <h1 class="text-2xl font-bold text-cyan-400">Book_Verse 🛸</h1>
+
+          <div class="hidden md:flex gap-8">
+            <a href="#home">Home</a>
+            <a href="#books">Books</a>
+            <a href="#categories">Categories</a>
+            <a href="#reviews">Reviews</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <button
+              onclick="openModal()"
+              class="bg-cyan-500 px-4 py-2 rounded-lg"
+            >
+              Login
+            </button>
+
+            <div class="relative">
+              🛒
+              <span
+                id="cartCount"
+                class="absolute -top-3 -right-3 bg-red-500 text-xs px-2 rounded-full"
+              >
+                0
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section
+        id="home"
+        class="hero-bg h-screen flex items-center justify-center text-center"
+      >
+        <div>
+          <h1 class="text-6xl font-bold mb-6">Explore Infinite Worlds 📚</h1>
+
+          <p class="text-xl mb-8">Your Gateway To Knowledge And Imagination</p>
+
+          <a href="#books" class="bg-cyan-500 px-8 py-4 rounded-xl text-lg">
+            Explore Books
+          </a>
+        </div>
+      </section>
+
+      <!-- SEARCH -->
+      <section class="py-12 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">Find Your Next Book</h2>
+
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search Books..."
+          class="w-full max-w-xl p-4 rounded-lg text-white"
+        />
+      </section>
+
+      <!-- BOOKS -->
+      <section id="books" class="py-20 px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Featured Books</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="book-card bg-slate-800 p-5 rounded-xl">
+            <img
+              src="https://i.pinimg.com/736x/e1/06/00/e10600a3f70d7d5f8cd1ea4364b3cd23.jpg"
+              class="rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-bold">Atomic Habits</h3>
+            <h6>by James Clear</h6>
+            <p>Transform your life with tiny changes.</p>
+            <p class="my-3">₹399</p>
+            <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+              Add To Cart
+            </button>
+          </div>
+
+          <div class="book-card bg-slate-800 p-5 rounded-xl">
+            <img
+              src="https://i.pinimg.com/736x/49/7f/22/497f22527c6c0b20fb0bbe814ab918b2.jpg"
+              class="rounded-lg mb-4"/>
+            <h3 class="text-2xl font-bold">The Alchemist</h3>
+            <h6>by Paulo Coelho</h6>
+            <p>A story about following your dreams.</p>
+            <p class="my-3">₹499</p>
+            <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+              Add To Cart
+            </button>
+          </div>
+
+          <div class="book-card bg-slate-800 p-5 rounded-xl">
+            <img
+              src="https://i.pinimg.com/736x/d9/6c/3a/d96c3a6cf03495a3a231a89400e61ccd.jpg"
+              class="rounded-lg mb-4"
+            />
+            <h3 class="text-2xl font-bold">Rich Dad Poor Dad</h3>
+            <h6>by Robert Kiyosaki</h6>
+            <p>Learn the secrets of wealth and financial success.</p>
+            <p class="my-3">₹299</p>
+            <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORIES -->
+      <section id="categories" class="py-20 bg-slate-800">
+        <h2 class="text-4xl font-bold text-center mb-12">Book Categories</h2>
+
+        <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
+          <a
+            href="fiction.html"
+            class="bg-slate-700 p-8 rounded-xl text-center hover:bg-cyan-600"
+          >
+            Fiction
+          </a>
+
+          <a
+            href="science.html"
+            class="bg-slate-700 p-8 rounded-xl text-center hover:bg-cyan-600"
+          >
+            Science
+          </a>
+
+          <a
+            href="history.html"
+            class="bg-slate-700 p-8 rounded-xl text-center hover:bg-cyan-600"
+          >
+            History
+          </a>
+
+          <a
+            href="technology.html"
+            class="bg-slate-700 p-8 rounded-xl text-center hover:bg-cyan-600"
+          >
+            Technology
+          </a>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="reviews" class="py-20">
+        <h2 class="text-4xl font-bold text-center mb-12">Reader Reviews</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
+          <div class="bg-slate-800 p-6 rounded-xl">
+            ⭐⭐⭐⭐⭐
+            <p class="mt-4">Amazing collection and smooth interface.</p>
+          </div>
+
+          <div class="bg-slate-800 p-6 rounded-xl">
+            ⭐⭐⭐⭐⭐
+            <p class="mt-4">Found many books for my semester.</p>
+          </div>
+
+          <div class="bg-slate-800 p-6 rounded-xl">
+            ⭐⭐⭐⭐⭐
+            <p class="mt-4">Modern design and easy navigation.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="bg-black py-10 text-center">
+        <h2 class="text-3xl font-bold text-cyan-400">Book_Verse 🛸</h2>
+
+        <p class="mt-4">Explore • Learn • Imagine</p>
+
+        <p class="mt-4 text-gray-400">
+          © 2026 Book_Verse. All Rights Reserved.
+        </p>
+      </footer>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div
+      id="modal"
+      class="modal fixed inset-0 bg-black bg-opacity-70 justify-center items-center z-50"
+    >
+      <div class="bg-white text-black p-8 rounded-xl w-96">
+        <h2 class="text-3xl font-bold mb-6">Login</h2>
+
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full p-3 border mb-4"
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full p-3 border mb-4"
+        />
+
+        <button class="w-full bg-cyan-500 text-white p-3 rounded">Login</button>
+
+        <p class="mt-4 text-center">
+          No account?
+          <a href="#" class="text-blue-500"> Register </a>
+        </p>
+
+        <button
+          onclick="closeModal()"
+          class="mt-4 w-full bg-red-500 text-white p-3 rounded"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let cart = 0;
+
+      function addCart() {
+        cart++;
+        document.getElementById("cartCount").innerText = cart;
+      }
+
+      function openModal() {
+        document.getElementById("modal").classList.add("active");
+        document.getElementById("mainContent").classList.add("blur-bg");
+      }
+
+      function closeModal() {
+        document.getElementById("modal").classList.remove("active");
+        document.getElementById("mainContent").classList.remove("blur-bg");
+      }
+
+      // SEARCH FUNCTION
+      const searchInput = document.getElementById("searchInput");
+
+      searchInput.addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+
+        const books = document.querySelectorAll(".book-card");
+
+        books.forEach((book) => {
+          const title = book.querySelector("h3").innerText.toLowerCase();
+
+          if (title.includes(value)) {
+            book.style.display = "block";
+          } else {
+            book.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

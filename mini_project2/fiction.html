@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Fiction Books</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background: #0f172a;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="max-w-6xl mx-auto py-20">
+      <h1 class="text-5xl mb-10">📚 Fiction Books</h1>
+
+      <section class="py-12 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">Find Your Next Book</h2>
+
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search Books..."
+          class="w-full max-w-xl p-4 rounded-lg text-white"
+        />
+      </section>
+
+      <a href="index.html" class="bg-cyan-500 px-4 py-2 rounded"> ← Back </a>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/49/7f/22/497f22527c6c0b20fb0bbe814ab918b2.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Alchemist</h3>
+          <h6>by Paulo Coelho</h6>
+          <p>A story about following your dreams.</p>
+          <p class="my-3">₹499</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/c6/1f/40/c61f40ac9df8167960ee721c54facdaa.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Nightangle</h3>
+          <h6>by Kristian Hannah</h6>
+          <p>A moving historical fiction novel set in France during World War II, following two sisters whose courage and resilience are tested as they navigate the German occupation.</p>
+          <p class="my-3">₹699</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/49/e8/6d/49e86dfdfc5aeedd02a082d70bd7ead3.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Man Called Ove</h3>
+          <h6>by Fredrik Backman</h6>
+          <p> A heartwarming and comedic story about a grumpy, isolated curmudgeon whose strict adherence to rules is challenged by the community around him.</p>
+          <p class="my-3">₹450</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/7f/44/82/7f448217c29e3a4e66d9a3d3d5ceb571.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Invisible Life of Addie LaRue</h3>
+          <h6>by V.E. Schwab</h6>
+          <p> A mysterious and captivating tale of a young woman who defies fate and seeks to leave her mark on the world.</p>
+          <p class="my-3">₹399</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/97/3e/fc/973efc9f6574ed875b83b0ea3c6c4ede.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Circe</h3>
+          <h6>by Madeline Miller</h6>
+          <p> A captivating retelling of the Greek myth of Circe, the enchantress who turns men into pigs.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/736x/48/24/16/4824167e6495f00dca15b47e3c76200b.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">Verity </h3>
+          <h6>by Colleen Hoover</h6>
+          <p> A gripping psychological thriller about a young woman who discovers a dark secret about her boyfriend.</p>
+          <p class="my-3">₹250</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/af/90/96/af90967bc35c9eef7afdff1afbe2dff6.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Color Purple</h3>
+          <h6>by Alice Walker</h6>
+          <p> A powerful novel about a young African American woman who overcomes trauma and finds her voice.</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/c1/04/7c/c1047cb35a61e3e81e6de716d394cda8.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The lost apothecary</h3>
+          <h6>by Sarah Penner</h6>
+          <p> A captivating historical fiction and mystery novel that connects a present-day historian with a secret, murderous apothecary in 18th-century London</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="bg-slate-800 p-5 rounded">
+          <img
+            src="https://i.pinimg.com/1200x/d7/a6/99/d7a69999d8d3d35b763326e7d2fbbcdf.jpg"
+            class="rounded-lg mb-4"
+          />
+          <h3 class="text-2xl font-bold">The Kite Runner</h3>
+          <h6>by Khaled Hosseini</h6>
+          <p> A powerful novel about a young Afghan boy who grows up in Kabul and later moves to the United States</p>
+          <p class="my-3">₹299</p>
+          <button onclick="addCart()" class="bg-cyan-500 px-4 py-2 rounded">
+            Add To Cart
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <script>
+      // SEARCH FUNCTION
+      const searchInput = document.getElementById("searchInput");
+
+      searchInput.addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+
+        const books = document.querySelectorAll(".book-card");
+
+        books.forEach((book) => {
+          const title = book.querySelector("h3").innerText.toLowerCase();
+
+          if (title.includes(value)) {
+            book.style.display = "block";
+          } else {
+            book.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
